@@ -25,14 +25,15 @@
 function displayJsonToHtmlTable(jsonData){
     var table=document.getElementById("dataTable");
     if(jsonData.length>0){
-        var htmlData='<thead><tr> <th>titre</th><th>edition</th><th>prix</th></tr></thead><tbody>';
+        var htmlData='<thead><tr> <th>ISBN</th><th>	Titre</th><th>	Auteur</th><th>	Discipline</th><th>	Année</th></tr></thead><tbody>';
         
         for(var i=0;i<jsonData.length;i++){
             var row=jsonData[i];
-            htmlData+='<tr><td>'+row["titre"]+'</td><td>'+row["edition"]
-                  +'</td><td>'+row["prix"]+'</td></tr>';  }
+            
+
+            htmlData+='<tr><td>'+row["ISBN"]+'</td><td>'+row["Titre"]+'</td><td>'+row["Auteur"]+'</td><td>'+row["Discipline"]+'</td><td>'+row["Année"]+'</td></tr>';  }
         htmlData+='</tbody>'
-        htmlData+='<tfooter><tr> <th>titre</th><th>edition</th><th>prix</th></tr></tfooter><tbody>';
+        htmlData+='<tfooter><tr> <th>ISBN</th><th>	Titre</th><th>	Auteur</th><th>	Discipline</th><th>	Année</th></tr><tbody>';
         table.innerHTML=htmlData;
         $(document).ready(function() {
             $('#dataTable').DataTable();
