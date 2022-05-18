@@ -31,6 +31,7 @@ function displayJsonToHtmlTable(jsonData){
             htmlData+='<tr><td>'+row["ISBN"]+'</td><td>'+row["Titre"]+'</td><td>'+row["Auteur"]+'</td><td>'+row["Discipline"]+'</td><td>'+row["Année"]+'</td><td>'+row["PUHT"]+'</td></tr>';  }
         htmlData+='</tbody>'
         htmlData+='<tfooter><tr> <th>ISBN</th><th>	Titre</th><th>	Auteur</th><th>	Discipline</th><th>	Année</th><th>PUHT</th></tr><tbody>';
+        document.getElementById('Patienter').style.display="none";
         table.innerHTML=htmlData;
         $(document).ready(function() {
             $('#dataTable').DataTable();
